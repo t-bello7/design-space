@@ -1,14 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { Routes, Route, Link } from "react-router-dom";
+import Home from './pages/Home';
+import ChartComponent from './components/molecules/ChartComponent';
+import './App.scss'
 
-function App() {
-
+const App = () => {
   return (
-    <div className="App">
-     
-      <h1>Designs</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/chart-component" element={<ChartComponent />} />
+    </Routes>
   )
 }
 
