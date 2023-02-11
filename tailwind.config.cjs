@@ -6,11 +6,17 @@ module.exports = {
   ],
   theme: {
     screens: {
-      // sm: '375px',
-      // lg: '1440px',
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
     },
     colors: {
+      'transparent': 'transparent',
       'white': 'hsl(0, 0%, 100%)',
+      'purple-from': 'hsla(259, 100%, 51%, 1)',
+      'purple-to': 'hsla(292, 63%, 53%, 0.94)',
+      'neutral-blur-purple': ' hsla(214, 33%, 17%, 1)',
       'primary-soft-red':  'hsl(10, 79%, 65%)',
       'primary-cyan': 'hsl(186, 34%, 60%)',
       'primary-dark-purple': 'hsl(213,34%,11%)',
@@ -21,7 +27,8 @@ module.exports = {
       'neutral-pale-orange': 'hsl(33, 100%, 98%)'
     },
     fontFamily: {
-      sans: ["DM Sans"]
+      sans: ["DM Sans"],
+      satoshi: ["Satoshi", "sans-seriff"],
     },
     container: {
       center: true,
