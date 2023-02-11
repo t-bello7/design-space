@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
+import LoyalBase from './pages/LoyalBase';
 import ChartComponent from './components/molecules/ChartComponent';
 import './App.scss'
 
@@ -9,6 +9,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/chart-component" element={<ChartComponent />} />
+      <Route path="/loyal-base" element={<LoyalBase />} />
     </Routes>
   )
 }
