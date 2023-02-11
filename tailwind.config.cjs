@@ -14,6 +14,7 @@ module.exports = {
     colors: {
       'transparent': 'transparent',
       'white': 'hsl(0, 0%, 100%)',
+      'blue': 'hsla(220, 81%, 49%, 1)',
       'purple-from': 'hsla(259, 100%, 51%, 1)',
       'purple-to': 'hsla(292, 63%, 53%, 0.94)',
       'neutral-blur-purple': ' hsla(214, 33%, 17%, 1)',

@@ -1,0 +1,75 @@
+.image-bg {
+    position: absolute;
+    // z-index: 1;
+    &__ellipse-one{
+        top:5%;
+        right: 30%; 
+    }
+
+    &__ellipse-two{ 
+        left: -15%;
+        top: 15%;
+    }
+    
+    &__ellise-three {
+        right: 0;
+        top: 25%;
+    }
+
+    &__ellipse-four{
+        bottom: 45%;
+    }
+    
+    &__vector {
+        right: 9%;
+    }
+
+    &__star-one {
+        top: 15%;
+        left: 30%; 
+    }
+    &__star-two {
+        top: 35%;
+        left: 90%; 
+    }
+
+    &__star-three {
+        top: 80%;
+    }
+
+    &__star-four {
+        left: 80%;
+        top: 80%;
+    }
+
+    &__star-five{
+        bottom: 45%;
+        left: 30%;
+    }
+    &__star-six{
+        right: 55%;
+        bottom: 15%;
+    }
+    &__star-seven {
+        bottom: 5%;
+        right: 20%;
+    }
+
+    &__highlight{
+        right: 50%;
+        bottom: 45%;
+    }
+
+    &__highlight-one{
+        right: 20%;
+        bottom: 50%;
+    }
+}
+
+.circle {
+        width: 32px;
+    height: 32px;
+    margin-right: -10px;
+    shape-outside: circle();
+    clip-path: circle();
+}
