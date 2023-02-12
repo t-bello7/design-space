@@ -22,21 +22,21 @@ const LoyalBase = () => {
                     <img src={logo} alt="logo"/>
                     <LoyalButton text="Get Priority Access" buttonType="secondary"/>
                 </div>
-                <img className="image-bg image-bg__ellipse-one z-10" src={ellipseImg} alt="ellipse"/>
-                <img className="image-bg image-bg__ellise-three z-10" src={ellipseTwoImg} alt="ellipse-two"/>
+                <img className="image-bg image-bg__ellipse-one z-10 invisible md:visible" src={ellipseImg} alt="ellipse"/>
+                <img className="image-bg image-bg__ellise-three z-10 invisible md:visible" src={ellipseTwoImg} alt="ellipse-two"/>
 
                 <div className="text-center min-h-screen flex flex-col relative justify-center">
-                    <img className="image-bg image-bg__star-one z-10" src={starImg} alt="star-img"/>
+                    <img className="image-bg image-bg__star-one z-10 invisible md:visible" src={starImg} alt="star-img"/>
                     <h1 className="font-black text-5xl pb-3 z-20 leading-relaxed"> Turn your best customers <br /> into <span className="text-neutral-light-purple"> Loyal Fans </span>  </h1>
-                    <img className="image-bg image-bg__star-two z-10" src={starImg} alt="star-img"/>
+                    <img className="image-bg image-bg__star-two z-10 invisible md:visible" src={starImg} alt="star-img"/>
                     
-                    <img className="image-bg image-bg__ellipse-two z-10" src={ellipseOneImg} alt="ellipse-one"/>
+                    <img className="image-bg image-bg__ellipse-two z-10 invisible md:visible" src={ellipseOneImg} alt="ellipse-one"/>
                     
                     <p className="z-20"> 
                     Loyalbaze, empowers businesses to offer digital, mobile-first loyalty programs to their customers. With our AI Powered platform, you can easily create and manage custom loyalty and rewards programs, track customer engagement, and gain valuable insights to improve your business. Sign up now to get early access.
                     </p>
                     <div className="flex flex-col mx-auto pt-7 w-1/2 gap-y-2 z-20">
-                        <img className="image-bg image-bg__vector z-10" src={vectorImg} alt="vector-img"/>
+                        <img className="image-bg image-bg__vector z-10 invisible md:visible" src={vectorImg} alt="vector-img"/>
                         <LoyalInput inputType="text" placeholder="Tell us your name" icon={profileIcon}/>
                         <LoyalInput inputType="email" placeholder="Enter your email address" icon={mailIcon}/>
                         <LoyalButton text="Get early access" buttonType="primary"/>
@@ -51,14 +51,14 @@ const LoyalBase = () => {
                             <span> +57 Joined </span>
                         </div>
                     </div>
-                    <img className="image-bg image-bg__star-three z-10 w-12" src={starImg} alt="star-img"/>
-                    <img className="image-bg image-bg__star-four z-10" src={starImg} alt="star-img"/>
+                    <img className="image-bg image-bg__star-three z-10 w-12 invisible md:visible" src={starImg} alt="star-img"/>
+                    <img className="image-bg image-bg__star-four z-10 invisible md:visible" src={starImg} alt="star-img"/>
 
                 </div>
 
                 <div className="text-center my-24 flex flex-col gap-8 items-center justify-between md:flex-row">
-                    <img className="image-bg image-bg__ellipse-four z-10" src={ellipseImg} alt="ellipse-img"/>
-                    <img className="image-bg image-bg__star-five z-10" src={starImg} alt="star-img"/>
+                    <img className="image-bg image-bg__ellipse-four z-10 invisible md:visible" src={ellipseImg} alt="ellipse-img"/>
+                    <img className="image-bg image-bg__star-five z-10 invisible md:visible" src={starImg} alt="star-img"/>
 
 
                     <div className="w-full relative z-20 md:w-1/2">
@@ -71,8 +71,8 @@ const LoyalBase = () => {
                         </p>   
                     </div>
                     
-                    <img className="image-bg  image-bg__highlight z-10" src={highlightImg} alt="highlight-img"/>
-                    <img className="image-bg image-bg__highlight-one z-10" src={highlightImg} alt="highlight-img"/>
+                    <img className="image-bg  image-bg__highlight z-10 invisible md:visible" src={highlightImg} alt="highlight-img"/>
+                    <img className="image-bg image-bg__highlight-one z-10 invisible md:visible" src={highlightImg} alt="highlight-img"/>
 
                     <div className="flex w-full flex-col gap-y-4 p-12 z-20 bg-neutral-blur-purple rounded-3xl md:w-1/2"> 
 
@@ -91,8 +91,8 @@ const LoyalBase = () => {
                         <LoyalButton text="Send Request" buttonType="primary" />
                     </div>
 
-                    <img className="image-bg image-bg__star-six w-12 z-10" src={starImg} alt="star-img"/>
-                    <img className="image-bg image-bg__star-seven w-12 z-10" src={starImg} alt="star-img"/>
+                    <img className="image-bg image-bg__star-six w-12 z-10 invisible md:visible" src={starImg} alt="star-img"/>
+                    <img className="image-bg image-bg__star-seven w-12 z-10 invisible md:visible" src={starImg} alt="star-img"/>
                 </div> 
 
                 <hr />
