@@ -1,7 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Home from './pages/Home';
-import LoyalBase from './pages/LoyalBase';
 import ChartComponent from './components/molecules/ChartComponent';
+import {
+  Scroll,
+  Home,
+  LoyalBase
+} from './pages'
 import './App.scss'
 
 const App = () => {
@@ -10,6 +13,8 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/chart-component" element={<ChartComponent />} />
       <Route path="/loyal-base" element={<LoyalBase />} />
+      <Route path="/scroll-animate" element={<Scroll />} />
+
     </Routes>
   )
 }

@@ -38,6 +38,9 @@ npx eslint . -->
 
 ## Resources
 - https://www.figma.com/file/l7SqJ3ZfkAKih9sFxvWSR4/Microverse-Student-Project-1?node-id=0%3A1
+- www.hover.dev/components/heros#smooth-scroll-hero
+- www.hover.dev/components/heros#aurora-hero
+- www.hover.dev/components/heros#shuffle-hero
 
 ## Authors
 
