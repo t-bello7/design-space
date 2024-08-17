@@ -41,7 +41,7 @@ npx eslint . -->
 - www.hover.dev/components/heros#smooth-scroll-hero
 - www.hover.dev/components/heros#aurora-hero
 - www.hover.dev/components/heros#shuffle-hero
-
+- www.hover.dev/components/features#text-parallax-content-(scroll)
 ## Authors
 
 👤 **Author1**

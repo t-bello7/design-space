@@ -1,6 +1,7 @@
 import {
     SmoothScrollHero,
-    AuroHero
+    AuroHero,
+    ShuffleHero
 } from '../components'
 
 const Scroll = () => {
@@ -10,6 +11,8 @@ const Scroll = () => {
             <SmoothScrollHero />
             <h2> Aurora Hero  </h2>
             <AuroHero />
+            <h2> Shuffle Hero </h2>
+            <ShuffleHero />
         </div>
     )
 }
