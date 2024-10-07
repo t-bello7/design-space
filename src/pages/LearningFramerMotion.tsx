@@ -1,7 +1,8 @@
 import { 
     FramerExitAnimation,
     FramerMenuToggle,
-    FramerCounter
+    FramerCounter,
+    FramerToggleButton
 } from "../components"
 
 const LearningFramerMotion = () => {
@@ -14,6 +15,10 @@ const LearningFramerMotion = () => {
             <FramerMenuToggle />
             <h2> Framer Counter Animaton </h2>
             <FramerCounter />
+            <h3> Toggle Button </h3>
+            <div className="bg-primary-soft-red">
+                <FramerToggleButton />
+            </div>
         </section>
     )
 }

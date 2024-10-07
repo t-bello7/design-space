@@ -4,6 +4,7 @@ import ShuffleHero from "./ShuffleHero";
 import FramerExitAnimation from "./FramerExitAnimation";
 import FramerMenuToggle from "./FramerMenuToggle";
 import FramerCounter from "./FramerCounter";
+import FramerToggleButton from "./FramerToggleButton";
 
 export {
     SmoothScrollHero,
@@ -11,5 +12,6 @@ export {
     ShuffleHero,
     FramerExitAnimation,
     FramerMenuToggle,
-    FramerCounter
+    FramerCounter,
+    FramerToggleButton
 }
