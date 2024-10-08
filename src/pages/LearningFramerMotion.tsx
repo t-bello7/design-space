@@ -2,13 +2,14 @@ import {
     FramerExitAnimation,
     FramerMenuToggle,
     FramerCounter,
-    FramerToggleButton
+    FramerToggleButton,
+    SharedLayoutAnimation
 } from "../components"
 
 const LearningFramerMotion = () => {
 
     return (
-        <section>
+        <section className='mx-11'>
             <h2> Framer Decalarative Exit Animation  </h2>
             <FramerExitAnimation />
             <h2> Framer Menu Animation</h2>
@@ -19,6 +20,8 @@ const LearningFramerMotion = () => {
             <div className="bg-primary-soft-red">
                 <FramerToggleButton />
             </div>
+            <h3> Shared Layout Animation </h3>
+            <SharedLayoutAnimation />
         </section>
     )
 }
