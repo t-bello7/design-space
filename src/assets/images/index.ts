@@ -7,6 +7,9 @@ import starImg from "./star.svg";
 import logo from "./loyal-logo.svg"
 import vectorImg from "./vector.svg";
 import logosaas from "./logosaas.png"
+import cogImg from "./cog.png"
+import cylinderImg from "./cylinder.png"
+import noodleImg from "./noodle.png"
 
 export {
     ellipseImg,
@@ -17,5 +20,8 @@ export {
     starImg,
     logo,
     vectorImg,
-    logosaas
+    logosaas,
+    cogImg,
+    cylinderImg,
+    noodleImg
 }
