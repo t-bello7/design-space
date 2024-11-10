@@ -1,17 +1,23 @@
-import LoyalButton from "../components/atoms/LoyalButton";
-import LoyalInput from "../components/atoms/LoyalInput";
-import callIcon from "../assets/icons/call.svg";
-import homeIcon from "../assets/icons/home.svg";
-import profileIcon from "../assets/icons/profile.svg";
-import mailIcon from "../assets/icons/mail.svg";
-import ellipseImg from "../assets/images/ellipse.svg";
-import ellipseOneImg from "../assets/images/ellipse-1.svg";
-import ellipseTwoImg from "../assets/images/ellipse-2.svg";
-import highlightImg from "../assets/images/highlight.svg";
-import lineImg from "../assets/images/line.svg";
-import starImg from "../assets/images/star.svg";
-import logo from "../assets/images/loyal-logo.svg"
-import vectorImg from "../assets/images/vector.svg";
+import {
+    LoyalButton,
+    LoyalInput
+} from "../components/atoms"
+import {
+    mailIcon,
+    homeIcon,
+    profileIcon,
+    callIcon
+} from "../assets/icons"
+import {
+    ellipseImg,
+    ellipseOneImg,
+    ellipseTwoImg,
+    highlightImg,
+    lineImg,
+    starImg,
+    logo,
+    vectorImg
+} from "../assets/images"
 import "../assets/style/loyal.scss";
 
 const LoyalBase = () => {

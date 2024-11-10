@@ -8,6 +8,7 @@ const Home = () => {
         <Link to="/scroll-animate"> <h1>Scroll Animations</h1> </Link>
         <Link to="/learing-framer-motion"> Learning Framer Motion </Link>
         <Link to="/button"> <h1> Buttons </h1> </Link>
+        <Link to="/digital-page"> <h1> Digital landing page</h1></Link>
       </div>
     )
 }
