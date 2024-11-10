@@ -7,6 +7,7 @@ const Home = () => {
         <Link to="/loyal-base"> <h1>Loyal Base</h1> </Link>
         <Link to="/scroll-animate"> <h1>Scroll Animations</h1> </Link>
         <Link to="/learing-framer-motion"> Learning Framer Motion </Link>
+        <Link to="/button"> <h1> Buttons </h1> </Link>
       </div>
     )
 }

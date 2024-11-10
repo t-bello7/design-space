@@ -6,6 +6,7 @@ import FramerMenuToggle from "./FramerMenuToggle";
 import FramerCounter from "./FramerCounter";
 import FramerToggleButton from "./FramerToggleButton";
 import SharedLayoutAnimation from "./SharedLayoutAnimation";
+import EncryptButton from "./EncryptButton";
 
 export {
     SmoothScrollHero,
@@ -15,5 +16,6 @@ export {
     FramerMenuToggle,
     FramerCounter,
     FramerToggleButton,
-    SharedLayoutAnimation
+    SharedLayoutAnimation,
+    EncryptButton
 }

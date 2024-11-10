@@ -4,7 +4,8 @@ import {
   Scroll,
   Home,
   LoyalBase,
-  LearningFramerMotion
+  LearningFramerMotion,
+  Button
 } from './pages'
 import './App.scss'
 
@@ -16,6 +17,7 @@ const App = () => {
       <Route path="/loyal-base" element={<LoyalBase />} />
       <Route path="/scroll-animate" element={<Scroll />} />
       <Route path="/learing-framer-motion" element={<LearningFramerMotion />} />
+      <Route path="/button" element={<Button />} />
     </Routes>
   )
 }
