@@ -6,7 +6,13 @@ import {
     logosaas,
     cogImg,
     cylinderImg,
-    noodleImg
+    noodleImg,
+    acmeLogo,
+    apexLogo,
+    celestialLogo,
+    echoLogo,
+    pulseLogo,
+    quantumLogo
 } from "../assets/images"
 
 const Header = () => {
@@ -76,8 +82,32 @@ const Hero = () => {
 }
 const LogoTicker = () => {
     return (
+        <section className="py-8 md:py-12 bg-white ">
+            <div className="container">
+                <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+                    <div className="flex gap-14 flex-none">
+                        <img src={acmeLogo} alt="acme Logo" className="logo-ticker-img" />
+                        <img src={apexLogo} alt="apex Logo" className="logo-ticker-img" />
+                        <img src={celestialLogo} alt="celestial Logo" className="logo-ticker-img" />
+                        <img src={echoLogo} alt="echo Logo" className="logo-ticker-img" />
+                        <img src={pulseLogo} alt="pulse Logo" className="logo-ticker-img" />
+                        <img src={quantumLogo} alt="pulse Logo" className="logo-ticker-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+const ProductShowcase = () => {
+    return (
         <section>
-            Ticker
+            <div className="container">
+                <div> Boost your productivity </div>
+                <h2> A more effective way to track progress </h2>
+                <p>
+                    Effortlessly turn your ideas into a fully functional, responsive, Saas website in just minutes with this template.
+                </p>
+            </div>
         </section>
     )
 }
