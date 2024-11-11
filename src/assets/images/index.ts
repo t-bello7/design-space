@@ -16,6 +16,9 @@ import celestialLogo from "./logo-celestial.png"
 import echoLogo from "./logo-echo.png"
 import pulseLogo from "./logo-pulse.png"
 import quantumLogo from "./logo-quantum.png"
+import productImg from "./product-image.png"
+import pyramidImg from "./pyramid.png"
+import tubeImg from "./tube.png"
 
 export {
     ellipseImg,
@@ -35,5 +38,8 @@ export {
     celestialLogo,
     echoLogo,
     pulseLogo,
-    quantumLogo
+    quantumLogo,
+    productImg,
+    pyramidImg,
+    tubeImg
 }

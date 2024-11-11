@@ -1,6 +1,8 @@
 import {
     ArrowRightIcon,
-    SaasMenuIcon
+    SaasMenuIcon,
+    checkIcon,
+    CheckIcon
 } from "../assets/icons"
 import { 
     logosaas,
@@ -12,7 +14,10 @@ import {
     celestialLogo,
     echoLogo,
     pulseLogo,
-    quantumLogo
+    quantumLogo,
+    productImg,
+    pyramidImg,
+    tubeImg
 } from "../assets/images"
 
 const Header = () => {
@@ -52,7 +57,7 @@ const Hero = () => {
             <div className="container">
             <div className="md:flex items-center">
                 <div className="md:w-[478px]">
-                    <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight"> Version 2.0 is here </div>
+                    <div className="section-text"> Version 2.0 is here </div>
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
                         Pathway to productivity
                     </h1>
@@ -100,13 +105,123 @@ const LogoTicker = () => {
 }
 const ProductShowcase = () => {
     return (
-        <section>
+        <section className="bg-gradient-to-b from-[#FFFFFF] overflow-x-clip to-[#D2DCFF] py-24">
             <div className="container">
-                <div> Boost your productivity </div>
-                <h2> A more effective way to track progress </h2>
-                <p>
-                    Effortlessly turn your ideas into a fully functional, responsive, Saas website in just minutes with this template.
-                </p>
+                <div className="max-w-[540px] mx-auto">
+                    <div className="flex justify-center">
+                        <div className="section-text"> Boost your productivity </div>
+                    </div>
+                    <h2 className="section-title mt-5"> A more effective way to track progress </h2>
+                    <p className="section-description mt-5">
+                        Effortlessly turn your ideas into a fully functional, responsive, Saas website in just minutes with this template.
+                    </p>
+                </div>
+                <div className="relative">
+                    <img src={productImg} alt="product image" className="mt-10" />
+                    <img src={pyramidImg} alt="pyramid image" className="hidden md:block absolute -right-36 -top-32" width={262} height={262}/>
+                    <img src={tubeImg} alt="tube image" className="hidden md:block absolute bottom-24 -left-36" height={248}/>
+                </div>
+
+            </div>
+        </section>
+    )
+}
+const pricingTiers = [
+    {
+        title: "Free",
+        monthlyPrice: 0,
+        buttonText: "Get started for free",
+        popular: false,
+        inverse: false,
+        features: [
+            "Up to 5 project members",
+            "Unlimited tasks and projects",
+            "2GB storage",
+            "Integration",
+            "Basic Support",
+        ]
+    },
+    {
+        title: "Pro",
+        monthlyPrice: 9,
+        buttonText: "Sign up now",
+        popular: true,
+        inverse: true,
+        features: [
+            "Up to 50 project members",
+            "Unlimited tasks and projects",
+            "50GB storage",
+            "Integration",
+            "Priority Support",
+        ]
+    },
+    {
+        title: "Buisness",
+        monthlyPrice: 19,
+        buttonText: "Sign up now",
+        popular: false,
+        inverse: false,
+        features: [
+            "Up to 5 project members",
+            "Unlimited tasks and projects",
+            "200GB storage",
+            "Integration",
+            "Dedicated amount manager",
+            "Custom Fields",
+            "Advanced analytics",
+            "Export capabilities",
+            "Api access",
+            "Advanced Security features"
+        ]
+    }
+]
+const Pricing = () => {
+    return (
+        <section className="py-24">
+            <div className="container">
+                <h2 className="section-title"> Pricing </h2>
+                <p className="section-description"> Free forever. Upgrade for unlimited tasks, better security </p>
+                <div className="flex flex-col gap-6 items-center mt-10">
+                    {
+                        pricingTiers.map(({
+                            title,
+                            monthlyPrice,
+                            buttonText,
+                            popular,
+                            inverse,
+                            features
+                        }) => (
+                            <div className={`p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full
+                                ${inverse === true && 'border-black bg-black text-white'} 
+                            `}>
+                                <div className="flex justify-between">
+                                    <h3 className={`text-lg font-bold ${inverse === true ? 'text-white/60': ' text-black/50'}
+                                        `}> {title} </h3>
+                                    { popular && (
+                                    <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20 "> 
+                                        <span className="bg-[linear-gradient(to_right,#DD7DDf,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] text-transparent bg-clip-text font-medium"> Popular </span>
+                                    </div>
+                                    )} 
+                                </div>
+                                <div className="flex items-baseline gap-1 mt-[30px]">
+                                    <span className="text-4xl font-bold tracking-tight leading-none"> $ {monthlyPrice} </span>
+                                    <span className="tracking-tight font-bold text-black/50"> /month</span>    
+                                </div>
+                                <button className={`btn btn-primary w-full mt-[30px] ${inverse && 'bg-white text-black'}`}> {buttonText} </button>
+                                <ul className="flex flex-col gap-5 mt-8">
+                                    {
+                                        features.map((feature) => ((
+                                            <li className="text-sm flex items-center gap-4">
+                                                <CheckIcon className="h-6 w-6"/>
+                                                <span>{feature}</span>
+                                            </li>
+                                        )))
+                                    }
+                                </ul>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </section>
     )
@@ -117,6 +232,8 @@ const DigitalLanding = () => {
         <Header />
         <Hero />
         <LogoTicker />
+        <ProductShowcase />
+        <Pricing />
     </div>)
 }
 

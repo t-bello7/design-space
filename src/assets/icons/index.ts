@@ -5,6 +5,8 @@ import callIcon from "./call.svg"
 import arrowRightIcon from "./arrow-right.svg"
 import ArrowRightIcon from "./ArrowRightIcon"
 import SaasMenuIcon from "./SaasMenuIcon"
+import checkIcon from "./check.svg"
+import CheckIcon from "./CheckIcon"
 
 export {
     mailIcon,
@@ -13,5 +15,7 @@ export {
     callIcon,
     arrowRightIcon,
     ArrowRightIcon,
-    SaasMenuIcon
+    SaasMenuIcon,
+    checkIcon,
+    CheckIcon
 }
