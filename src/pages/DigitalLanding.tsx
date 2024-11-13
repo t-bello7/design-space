@@ -132,14 +132,24 @@ const LogoTicker = () => {
         <section className="py-8 md:py-12 bg-white ">
             <div className="container">
                 <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
-                    <div className="flex gap-14 flex-none">
+                    <motion.div className="flex gap-14 flex-none pr-14"
+                        animate={{
+                            translateX: "-50%"
+                        }}
+                        transition={{
+                            duration: 20,
+                            repeat: Infinity,
+                            ease: "linear",
+                            repeatType: "loop"
+                        }}
+                    >
                         <img src={acmeLogo} alt="acme Logo" className="logo-ticker-img" />
                         <img src={apexLogo} alt="apex Logo" className="logo-ticker-img" />
                         <img src={celestialLogo} alt="celestial Logo" className="logo-ticker-img" />
                         <img src={echoLogo} alt="echo Logo" className="logo-ticker-img" />
                         <img src={pulseLogo} alt="pulse Logo" className="logo-ticker-img" />
                         <img src={quantumLogo} alt="pulse Logo" className="logo-ticker-img" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
@@ -437,7 +447,7 @@ const DigitalLanding = () => {
     <div className="font-sans antialiased bg-[#EAEEFE]">
         <Header />
         <Hero />
-        <LogoTicker />[]
+        <LogoTicker />
         <ProductShowcase />
         <Pricing />
         <Testimonial />
