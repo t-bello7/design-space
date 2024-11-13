@@ -107,7 +107,7 @@ const ProductShowcase = () => {
     return (
         <section className="bg-gradient-to-b from-[#FFFFFF] overflow-x-clip to-[#D2DCFF] py-24">
             <div className="container">
-                <div className="max-w-[540px] mx-auto">
+                <div className="section-header">
                     <div className="flex justify-center">
                         <div className="section-text"> Boost your productivity </div>
                     </div>
@@ -179,9 +179,11 @@ const Pricing = () => {
     return (
         <section className="py-24">
             <div className="container">
-                <h2 className="section-title"> Pricing </h2>
-                <p className="section-description"> Free forever. Upgrade for unlimited tasks, better security </p>
-                <div className="flex flex-col gap-6 items-center mt-10">
+                <div className="section-header">
+                    <h2 className="section-title"> Pricing </h2>
+                    <p className="section-description"> Free forever. Upgrade for unlimited tasks, better security and exclusive features </p>
+                </div>
+                <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
                     {
                         pricingTiers.map(({
                             title,

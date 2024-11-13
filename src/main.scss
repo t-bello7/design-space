@@ -30,6 +30,10 @@
     .section-description {
         @apply text-center text-[22px] leading-8 tracking-tight text-[#010D3E] mt-5
     }
+
+    .section-header {
+        @apply max-w-[540px] mx-auto
+    }
 }
 
 @font-face {
