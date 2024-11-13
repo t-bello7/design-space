@@ -7,6 +7,11 @@ import ArrowRightIcon from "./ArrowRightIcon"
 import SaasMenuIcon from "./SaasMenuIcon"
 import checkIcon from "./check.svg"
 import CheckIcon from "./CheckIcon"
+import InstaIcon from "./InstaIcon"
+import LinkedinIcon from "./LinkedinIcon"
+import PinIcon from "./PinIcon"
+import XIcon from "./XIcon"
+import YoutubeIcon from "./YoutubeIcon"
 
 export {
     mailIcon,
@@ -17,5 +22,10 @@ export {
     ArrowRightIcon,
     SaasMenuIcon,
     checkIcon,
-    CheckIcon
+    CheckIcon,
+    InstaIcon,
+    LinkedinIcon,
+    PinIcon,
+    XIcon,
+    YoutubeIcon
 }

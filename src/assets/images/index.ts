@@ -19,6 +19,17 @@ import quantumLogo from "./logo-quantum.png"
 import productImg from "./product-image.png"
 import pyramidImg from "./pyramid.png"
 import tubeImg from "./tube.png"
+import avatar1Img from "./avatar-1.png"
+import avatar2Img from "./avatar-2.png"
+import avatar3Img from "./avatar-3.png"
+import avatar4Img from "./avatar-4.png"
+import avatar5Img from "./avatar-5.png"
+import avatar6Img from "./avatar-6.png"
+import avatar7Img from "./avatar-7.png"
+import avatar8Img from "./avatar-8.png"
+import avatar9Img from "./avatar-9.png"
+import starDigitalImg from "./star.png"
+import springImg from "./spring.png"
 
 export {
     ellipseImg,
@@ -41,5 +52,16 @@ export {
     quantumLogo,
     productImg,
     pyramidImg,
-    tubeImg
+    tubeImg,
+    avatar1Img,
+    avatar2Img,
+    avatar3Img,
+    avatar4Img,
+    avatar5Img,
+    avatar6Img,
+    avatar7Img,
+    avatar8Img,
+    avatar9Img,
+    starDigitalImg,
+    springImg
 }
