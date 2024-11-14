@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, Fragment } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import {
     ArrowRightIcon,
@@ -78,52 +78,51 @@ const Hero = () => {
     return (
         <section ref={heroRef} className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
             <div className="container">
-            <div className="md:flex items-center">
-                <div className="md:w-[478px]">
-                    <div className="section-text"> Version 2.0 is here </div>
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
-                        Pathway to productivity
-                    </h1>
-                    <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-                        Celebrate the joy of accomplishment with an app desgined to track your progress, motivate your efforts, and celebrate your success
-                    </p>
-                    <div className="flex gap-1 items-center mt-[30px]">
-                        <button className="btn btn-primary"> Get for Free </button>
-                        <button className="btn btn-text gap-1"> 
-                            <span>
-                                Learn more
-                            </span>
-                            <ArrowRightIcon className="h-5 w-5" />
-                        </button>
+                <div className="md:flex items-center">
+                    <div className="md:w-[478px]">
+                        <div className="section-text"> Version 2.0 is here </div>
+                        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
+                            Pathway to productivity
+                        </h1>
+                        <p className="text-xl text-[#010D3E] tracking-tight mt-6">
+                            Celebrate the joy of accomplishment with an app desgined to track your progress, motivate your efforts, and celebrate your success
+                        </p>
+                        <div className="flex gap-1 items-center mt-[30px]">
+                            <button className="btn btn-primary"> Get for Free </button>
+                            <button className="btn btn-text gap-1"> 
+                                <span>
+                                    Learn more
+                                </span>
+                                <ArrowRightIcon className="h-5 w-5" />
+                            </button>
+                        </div>
+                    </div>
+                    <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
+                        <motion.img src={cogImg} alt="cog Image" className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
+                        animate={{
+                            translateY: [-30, 30]
+                        }}
+                        transition={{
+                            repeat: Infinity,
+                            repeatType: 'mirror',
+                            duration: 2,
+                            ease: "easeInOut"
+                        }}
+                        />
+                        <motion.img src={cylinderImg} alt="cylinder image" width={220} height={220} className="hidden md:block -top-8 -left-32 md:absolute"
+                        style={{
+                            translateY: translateY
+                        }}
+                        />
+                        <motion.img src={noodleImg} width={220} className="hidden lg:block md:absolute top-[524px] left-[448px] rotate-[30deg]"
+                        style={{
+                            rotate: 30,
+                            translateY: translateY
+                        }}
+                        />
                     </div>
                 </div>
-                <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
-                    <motion.img src={cogImg} alt="cog Image" className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
-                    animate={{
-                        translateY: [-30, 30]
-                    }}
-                    transition={{
-                        repeat: Infinity,
-                        repeatType: 'mirror',
-                        duration: 2,
-                        ease: "easeInOut"
-                    }}
-                    />
-                    <motion.img src={cylinderImg} alt="cylinder image" width={220} height={220} className="hidden md:block -top-8 -left-32 md:absolute"
-                    style={{
-                        translateY: translateY
-                    }}
-                    />
-                    <motion.img src={noodleImg} width={220} className="hidden lg:block md:absolute top-[524px] left-[448px] rotate-[30deg]"
-                    style={{
-                        rotate: 30,
-                        translateY: translateY
-                    }}
-                    />
-                </div>
             </div>
-            </div>
-
         </section>
     )
 }
@@ -149,6 +148,12 @@ const LogoTicker = () => {
                         <img src={echoLogo} alt="echo Logo" className="logo-ticker-img" />
                         <img src={pulseLogo} alt="pulse Logo" className="logo-ticker-img" />
                         <img src={quantumLogo} alt="pulse Logo" className="logo-ticker-img" />
+                        <img src={acmeLogo} alt="acme Logo" className="logo-ticker-img" />
+                        <img src={apexLogo} alt="apex Logo" className="logo-ticker-img" />
+                        <img src={celestialLogo} alt="celestial Logo" className="logo-ticker-img" />
+                        <img src={echoLogo} alt="echo Logo" className="logo-ticker-img" />
+                        <img src={pulseLogo} alt="pulse Logo" className="logo-ticker-img" />
+                        <img src={quantumLogo} alt="pulse Logo" className="logo-ticker-img" />
                     </motion.div>
                 </div>
             </div>
@@ -156,8 +161,14 @@ const LogoTicker = () => {
     )
 }
 const ProductShowcase = () => {
+    const productRef = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: productRef,
+        offset: ['start end', 'end start']
+    })
+    const translateY = useTransform(scrollYProgress, [0, 1], [150, -150])
     return (
-        <section className="bg-gradient-to-b from-[#FFFFFF] overflow-x-clip to-[#D2DCFF] py-24">
+        <section ref={productRef} className="bg-gradient-to-b from-[#FFFFFF] overflow-x-clip to-[#D2DCFF] py-24">
             <div className="container">
                 <div className="section-header">
                     <div className="flex justify-center">
@@ -170,8 +181,16 @@ const ProductShowcase = () => {
                 </div>
                 <div className="relative">
                     <img src={productImg} alt="product image" className="mt-10" />
-                    <img src={pyramidImg} alt="pyramid image" className="hidden md:block absolute -right-36 -top-32" width={262} height={262}/>
-                    <img src={tubeImg} alt="tube image" className="hidden md:block absolute bottom-24 -left-36" height={248}/>
+                    <motion.img src={pyramidImg} alt="pyramid image" className="hidden md:block absolute -right-36 -top-32" width={262} height={262}
+                      style={{
+                        translateY: translateY
+                      }}  
+                    />
+                    <motion.img src={tubeImg} alt="tube image" className="hidden md:block absolute bottom-24 -left-36" height={248} width={248}
+                        style={{
+                            translateY: translateY
+                        }}
+                    />
                 </div>
 
             </div>
@@ -253,7 +272,19 @@ const Pricing = () => {
                                         `}> {title} </h3>
                                     { popular && (
                                     <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20 "> 
-                                        <span className="bg-[linear-gradient(to_right,#DD7DDf,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] text-transparent bg-clip-text font-medium"> Popular </span>
+                                        <motion.span className="bg-[linear-gradient(to_right,#DD7DDf,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#DD7DDf,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] [background-size:200%] text-transparent bg-clip-text font-medium"
+                                            animate={{
+                                                backgroundPosition: "-100%"
+                                            }}
+                                            transition={{
+                                                duration: 1,
+                                                repeat: Infinity,
+                                                ease: "linear",
+                                                repeatType: "loop"
+                                            }}
+                                        >
+                                            Popular
+                                        </motion.span>
                                     </div>
                                     )} 
                                 </div>
@@ -339,30 +370,49 @@ const testimonials = [
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
-const TestimonialColumn = ({className, testimonials}: {className?: string, testimonials: {
+const TestimonialColumn = ({className, testimonials, duration}: {className?: string, testimonials: {
     text: string,
     imageSrc: string,
     name: string,
     username: string
-}[]})=> {
+}[], duration?: number})=> {
 return (
-    <div className={`flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] ${className}`}>
+    <div className={className}>    
+        <motion.div className="flex flex-col gap-6"
+        animate={{
+            translateY: "-25%"
+        }}
+        transition={{
+            repeat: Infinity,
+            ease: "linear",
+            repeatType: "loop",
+            duration: duration || 10
+        }}
+        >
         {
-            testimonials.map(({ text, imageSrc, name, username}) => (
-                <div className="card">                            
-                    <div>{text}</div>
-                    <div className="flex items-center gap-2 mt-5">
-                        <div>
-                            <img src={imageSrc} className="h-10 w-10 rounded-full" />
-                        </div>
-                        <div className="flex flex-col">
-                            <div className="font-medium tracking-tight leading-5"> {name} </div>
-                            <div className="leading-5 tracking-tight"> {username} </div>
-                        </div>
-                    </div>
-                </div>
-            )) 
+            [... new Array(2)].fill(0).map((_, index) => (
+                <Fragment key={index}>
+                    {
+                        testimonials.map(({ text, imageSrc, name, username}) => (
+                            <div className="card">                            
+                                <div>{text}</div>
+                                <div className="flex items-center gap-2 mt-5">
+                                    <div>
+                                        <img src={imageSrc} className="h-10 w-10 rounded-full" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <div className="font-medium tracking-tight leading-5"> {name} </div>
+                                        <div className="leading-5 tracking-tight"> {username} </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )) 
+                    }
+                </Fragment>
+            ))
         }
+        
+        </motion.div>
     </div>
     )
 }
@@ -379,10 +429,10 @@ const Testimonial = () => {
                         From intuitive design to powerful features, our app has become an essential tool for users around the world.
                     </p>
                 </div>
-                <div className="flex justify-center gap-6">
-                  <TestimonialColumn testimonials={firstColumn} />
-                  <TestimonialColumn className="hidden md:flex" testimonials={secondColumn} />
-                  <TestimonialColumn className="hidden lg:flex" testimonials={thirdColumn} />
+                <div className="flex justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] mt-10 max-h-[783px] overflow-hidden">
+                  <TestimonialColumn testimonials={firstColumn} duration={5} />
+                  <TestimonialColumn className="hidden md:block" testimonials={secondColumn} duration={8} />
+                  <TestimonialColumn className="hidden lg:block" testimonials={thirdColumn} duration={10} />
                 </div>
             </div>
             

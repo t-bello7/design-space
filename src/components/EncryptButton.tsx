@@ -11,7 +11,7 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
 
 
 const EncryptButton = () => {
-    const intervalRef = useRef(null)
+    const intervalRef = useRef<number>(0)
 
     const [text, setText] = useState(TARGET_TEXT);
     const stopScramble = () => {
