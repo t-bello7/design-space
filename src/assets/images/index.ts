@@ -30,6 +30,7 @@ import avatar8Img from "./avatar-8.png"
 import avatar9Img from "./avatar-9.png"
 import starDigitalImg from "./star.png"
 import springImg from "./spring.png"
+import yasmenImg from "./yasmeen.webp"
 
 export {
     ellipseImg,
@@ -63,5 +64,6 @@ export {
     avatar8Img,
     avatar9Img,
     starDigitalImg,
-    springImg
+    springImg,
+    yasmenImg
 }

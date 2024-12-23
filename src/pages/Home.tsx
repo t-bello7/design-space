@@ -9,6 +9,7 @@ const Home = () => {
         <Link to="/learing-framer-motion"> Learning Framer Motion </Link>
         <Link to="/button"> <h1> Buttons </h1> </Link>
         <Link to="/digital-page"> <h1> Digital landing page</h1></Link>
+        <Link to="/yasmen"> Yasmen Page Transition </Link>
       </div>
     )
 }
